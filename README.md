@@ -1,27 +1,26 @@
-**Performance Running Toronto** provides personalized running coaching to help athletes of all levels improve their performance, prevent injuries, and achieve their goals. From tailored training plans to one-on-one support, our mission is to make every stride count.
+# Performance Running Toronto
 
----
+Personal running coaching website for Eoin Taggart, hosted at https://performance-running.com/.
 
-## 🌟 Features
-- Personalized training plans for runners of all levels  
-- One-on-one coaching and support  
-- Focus on injury prevention and long-term performance  
-- Convenient online contact form powered by [Formspree](https://formspree.io)  
+## Structure
 
----
+- `index.html`: content, package prices, form and search/social metadata.
+- `styles.css`: responsive layouts, colours and typography.
+- `script.js`: mobile navigation, package selection and enquiry submission.
+- `images/prt-hero.webp`: optimized decorative running image, not a portrait of Eoin or a client.
+- `CNAME`: existing custom-domain configuration.
+- `robots.txt` and `sitemap.xml`: search crawler discovery.
 
-## 📂 Project Structure
+No build tools or dependencies are required. Serve the repository with any static web server, such as `python -m http.server 8000`.
 
----
+## Enquiries
 
-## 🚀 How to View
-You can view the live site here:  
-👉 [Performance Running Toronto Website](https://your-site-url-here)  
+The existing Formspree endpoint is preserved. The form sends name, email, coaching interest, optional race/date and running goals. JavaScript provides submission feedback and retains input on error. Without JavaScript, native form submission works. The endpoint's account configuration and inbox delivery must be checked by the owner; no test enquiry was sent during the redesign.
 
-*(Replace the link above with your Netlify/GitHub Pages link once deployed.)*
+## Content maintenance
 
----
+Update prices in both the package cards and form options/data-plan attributes together. Confirm group schedules before changing them. Add testimonials only with genuine approved athlete feedback. No placeholder booking links or unverified testimonials are included.
 
-## 📞 Contact
-📧 [Get in touch via our contact form](https://formspree.io/f/xblawqwn)  
-🌐 Performance Running Toronto – Helping every stride count.
+## Publishing
+
+The redesign branch is intended for review before merging into the branch used by GitHub Pages. The existing domain is preserved.

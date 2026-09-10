@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://performance-running.com/sitemap.xml
