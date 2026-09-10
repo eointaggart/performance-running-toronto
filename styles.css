@@ -4,6 +4,6 @@
 
 /* Coach introduction portrait */
 .about-with-photo{align-items:center;gap:clamp(32px,6vw,90px)}
-.coach-photo{margin:0;width:100%;max-width:440px;justify-self:center}
+.coach-photo{margin:0;width:100%;max-width:300px;justify-self:center}
 .coach-photo img{display:block;width:100%;height:auto}
-@media(max-width:800px){.about-with-photo{gap:32px}.coach-photo{max-width:360px}.about-with-photo h2 br{display:initial}}
+@media(max-width:800px){.about-with-photo{gap:32px}.coach-photo{max-width:240px}.about-with-photo h2 br{display:initial}}
