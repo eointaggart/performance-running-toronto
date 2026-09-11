@@ -14,3 +14,17 @@
   .about-with-photo .coach-photo{position:relative;max-width:none;min-height:0;align-self:stretch}
   .about-with-photo .coach-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 }
+
+/* Corporate coaching */
+.corporate{background:#f1f5f2}
+.corporate-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.corporate-options article{border-top:2px solid var(--ink);padding-top:24px}
+.corporate-options .eyebrow{margin-bottom:16px;font-size:11px}
+.corporate h3{font-size:24px;line-height:1.25;letter-spacing:-.5px;margin-bottom:14px}
+.corporate-options p:not(.eyebrow),.corporate-enquiry p{color:var(--muted)}
+.corporate-enquiry{display:flex;align-items:center;justify-content:space-between;gap:32px;border-top:1px solid var(--line);margin-top:40px;padding-top:32px}
+.corporate-enquiry>div{max-width:640px}
+.corporate-enquiry p{margin:0}
+.corporate-enquiry .button{flex-shrink:0}
+@media(min-width:801px) and (max-width:1100px){.header{gap:16px}.header .brand-logo{width:180px}nav{gap:16px;font-size:13px}.corporate-enquiry{align-items:flex-start;flex-direction:column}}
+@media(max-width:800px){.corporate-options{grid-template-columns:1fr;gap:24px}.corporate-enquiry{align-items:flex-start;flex-direction:column}.corporate-enquiry .button{max-width:100%}}
