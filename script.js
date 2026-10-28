@@ -21,15 +21,20 @@ document.addEventListener('keydown', event => {
     menu.focus();
   }
 });
-document.querySelectorAll('[data-plan]').forEach(link => {
-  link.addEventListener('click', () => {
-    document.querySelector('#interest').value = link.dataset.plan;
-  });
-});
+// Keep old bookmarked section links working after the page split.
+if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+  const legacyRoutes = {'#about':'/about/', '#services':'/coaching/', '#group':'/group-corporate/', '#corporate':'/group-corporate/#corporate', '#contact':'/contact/'};
+  if (legacyRoutes[window.location.hash]) window.location.replace(legacyRoutes[window.location.hash]);
+}
+const interest = document.querySelector('#interest');
+const selectedPlan = new URLSearchParams(window.location.search).get('plan');
+if (interest && selectedPlan && Array.from(interest.options).some(option => option.value === selectedPlan)) {
+  interest.value = selectedPlan;
+}
 document.querySelector('#year').textContent = new Date().getFullYear();
 const form = document.querySelector('form');
 const status = document.querySelector('#form-status');
-form.addEventListener('submit', async event => {
+if (form) form.addEventListener('submit', async event => {
   event.preventDefault();
   const button = form.querySelector('button');
   button.disabled = true;

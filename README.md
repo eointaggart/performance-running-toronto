@@ -24,3 +24,9 @@ Update prices in both the package cards and form options/data-plan attributes to
 ## Publishing
 
 The redesign branch is intended for review before merging into the branch used by GitHub Pages. The existing domain is preserved.
+
+## Website pages
+
+The site has five pages: `/`, `/coaching/`, `/about/`, `/group-corporate/`, and `/contact/`. Each folder contains its own `index.html`. Shared styles and behaviour remain in `styles.css` and `script.js`. Navigation and footer markup appear in each page; update all five when changing shared links. Serve the repository root with a static web server to preview root-relative links.
+
+Coaching enquiry links pass a `plan` query parameter to the contact page; the form selects only known package options. Legacy home-page section links redirect to the corresponding pages. The sitemap lists all five canonical URLs.

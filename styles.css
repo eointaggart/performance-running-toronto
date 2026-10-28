@@ -28,3 +28,17 @@
 .corporate-enquiry .button{flex-shrink:0}
 @media(min-width:801px) and (max-width:1100px){.header{gap:16px}.header .brand-logo{width:180px}nav{gap:16px;font-size:13px}.corporate-enquiry{align-items:flex-start;flex-direction:column}}
 @media(max-width:800px){.corporate-options{grid-template-columns:1fr;gap:24px}.corporate-enquiry{align-items:flex-start;flex-direction:column}.corporate-enquiry .button{max-width:100%}}
+
+/* Shared layouts for the five-page website. */
+nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:7px}
+.page-title{font-size:clamp(38px,4.5vw,62px);letter-spacing:-2.3px;line-height:1.08;margin-bottom:26px}
+.page-title em{color:#387662}.contact .page-title em{color:var(--green)}
+.home-intro{display:grid;grid-template-columns:1.4fr .7fr;gap:70px;align-items:center}
+.home-intro img{display:block;width:100%;height:400px;object-fit:cover;object-position:center}
+.home-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.home-options article{border-top:2px solid var(--ink);padding-top:24px}
+.home-options h3{font-size:24px;line-height:1.25;letter-spacing:-.5px}
+.home-options p{color:var(--muted)}
+.page-cta{display:flex;justify-content:space-between;align-items:center;gap:32px}.page-cta h2{font-size:36px}.page-cta p{margin-bottom:0}.page-cta .button{flex-shrink:0}
+@media(min-width:801px) and (max-width:1100px){nav{gap:14px}.header .brand-logo{width:160px}}
+@media(max-width:800px){.home-intro,.home-options{grid-template-columns:1fr;gap:32px}.home-intro img{max-width:320px;height:380px;justify-self:center}.page-cta{align-items:flex-start;flex-direction:column}.page-title{letter-spacing:-1.4px}}
