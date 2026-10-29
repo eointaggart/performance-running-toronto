@@ -34,3 +34,7 @@ Coaching enquiry links pass a `plan` query parameter to the contact page; the fo
 ## Homepage media
 
 The homepage uses three supplied group photos and two muted training clips in a responsive gallery. `hero.js` controls navigation, rotation and playback. Reduced motion and data saver preferences start it paused. Only the active video loads; hidden clips pause. Images are WebP; videos are compressed H.264 MP4 without audio.
+
+## Winter coaching
+
+`/winter-coaching/` presents the spring 2027 campaign using the existing $100/$150 monthly coaching packages. Ten new places is a manually maintained campaign statement; update it on the homepage, coaching page and winter page as availability changes. The contact form accepts winter-specific enquiry options. Race names are examples; no race dates or affiliation are claimed.
