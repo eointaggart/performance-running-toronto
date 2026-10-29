@@ -30,3 +30,7 @@ The redesign branch is intended for review before merging into the branch used b
 The site has five pages: `/`, `/coaching/`, `/about/`, `/group-corporate/`, and `/contact/`. Each folder contains its own `index.html`. Shared styles and behaviour remain in `styles.css` and `script.js`. Navigation and footer markup appear in each page; update all five when changing shared links. Serve the repository root with a static web server to preview root-relative links.
 
 Coaching enquiry links pass a `plan` query parameter to the contact page; the form selects only known package options. Legacy home-page section links redirect to the corresponding pages. The sitemap lists all five canonical URLs.
+
+## Homepage media
+
+The homepage uses three supplied group photos and two muted training clips in a responsive gallery. `hero.js` controls navigation, rotation and playback. Reduced motion and data saver preferences start it paused. Only the active video loads; hidden clips pause. Images are WebP; videos are compressed H.264 MP4 without audio.
