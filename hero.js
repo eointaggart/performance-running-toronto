@@ -7,12 +7,11 @@
   const pauseButton = gallery.querySelector('[data-hero-pause]');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let current = 0;
-  let paused = motion.matches || Boolean(navigator.connection?.saveData);
-  let hovering = false;
+  let paused = motion.matches;
   let timer;
   controls.hidden = false;
   function suspended() {
-    return paused || hovering || document.hidden || gallery.contains(document.activeElement);
+    return paused || document.hidden;
   }
   function sync() {
     clearTimeout(timer);
@@ -42,10 +41,6 @@
       event.preventDefault(); show(current + (event.key === 'ArrowRight' ? 1 : -1));
     }
   });
-  gallery.addEventListener('mouseenter', () => { hovering = true; sync(); });
-  gallery.addEventListener('mouseleave', () => { hovering = false; sync(); });
-  gallery.addEventListener('focusin', sync);
-  gallery.addEventListener('focusout', () => setTimeout(sync, 0));
   document.addEventListener('visibilitychange', sync);
   motion.addEventListener('change', () => { paused = motion.matches; sync(); });
   sync();
